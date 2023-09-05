@@ -4,6 +4,17 @@ module.exports = ({ env }) => ({
       defaultDepth: 3,
     },
   },
+  slugify: {
+    enabled: true,
+    config: {
+      contentTypes: {
+        fest: {
+          field: "slug",
+          references: "name",
+        },
+      },
+    },
+  },
   upload: {
     config: {
       provider: "cloudinary",
