@@ -15,6 +15,7 @@
     "@strapi/provider-upload-cloudinary": "^4.13.1",
     "@strapi/strapi": "4.13.1",
     "better-sqlite3": "8.5.0",
+    "pg": "^8.11.3",
     "strapi-plugin-populate-deep": "^3.0.0",
     "strapi-plugin-slugify": "^2.3.4"
   },
@@ -25,7 +26,7 @@
     "uuid": "02a77e49-fe56-4bec-85f4-3ac10c95ff75"
   },
   "engines": {
-    "node": ">=16.0.0 <=20.x.x",
+    "node": ">=16.0.0",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
