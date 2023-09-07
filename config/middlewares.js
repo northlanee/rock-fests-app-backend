@@ -1,6 +1,13 @@
 module.exports = [
   "strapi::errors",
-  "strapi::cors",
+  {
+    name: "strapi::cors",
+    config: {
+      enabled: true,
+      headers: "*",
+      origin: ["http://localhost:1337", "https://rock-fests.vercel.app"],
+    },
+  },
   "strapi::poweredBy",
   "strapi::logger",
   "strapi::query",
