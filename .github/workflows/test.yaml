@@ -1,0 +1,25 @@
+name: Book API
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Use NodeJs
+        uses: actions/setup-node@v1
+        with:
+          node-version: "18.x"
+      - name: Install dependecies
+        run: yarn
+      - name: Run tests
+        run: yarn test
+      - name: Install railway cli
+        run: npm i -g @railway/cli
+      - name: Deploy
+        run: RAILWAY_TOKEN=$RAILWAY_TOKEN railway up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
